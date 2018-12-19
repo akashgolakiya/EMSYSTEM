@@ -33,7 +33,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#fff"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -62,16 +61,69 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#fff">
+                android:layout_height="match_parent">
 
                 <RelativeLayout
+                    android:id="@+id/about_relativelayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
                     android:orientation="vertical">
 
-                    <Button
+                    <RelativeLayout
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/facebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/facebookicon"
+                            android:background="@drawable/ic_facebookicon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="15dp"
+                            />
+                        <TextView
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="like us on facebook"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/facebookicon"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/instagram"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@+id/facebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/instagramicon"
+                            android:background="@drawable/ic_instagramicon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="2dp"
+                            />
+                        <TextView
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="follow on instagram"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/instagramicon"/>
+
+                    </RelativeLayout>
+
+                   <!-- <Button
                         android:drawablePadding="5dp"
                         android:drawableLeft="@drawable/ic_facebookicon"
                         android:id="@+id/facebook"
@@ -79,11 +131,11 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:background="@drawable/facebookbutton"
-                        android:text="like us on facebook" />
-
-
+                        android:text="like us on facebook"
+                        android:layout_below="@+id/facebook_relativelayout"/>-->
+           <!--
                     <Button
-                        android:layout_below="@+id/facebook"
+                        android:layout_below="@+id/facebook_relativelayout"
                         android:id="@+id/instagram"
                         android:drawableLeft="@drawable/ic_instagramicon"
                         android:layout_width="wrap_content"
@@ -94,8 +146,8 @@
                         android:paddingRight="5dp"
                         android:background="@drawable/facebookbutton"
                         android:text="follow on instagram" />
-
-                    <Button
+-->
+                    <!--<Button
                         android:layout_below="@id/instagram"
                         android:id="@+id/policy"
                         android:padding="10dp"
@@ -103,7 +155,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:background="@drawable/rounde_corner_btn"
-                        android:text="privacy policy" />
+                        android:text="privacy policy" />-->
                 </RelativeLayout>
             </ScrollView>
 
