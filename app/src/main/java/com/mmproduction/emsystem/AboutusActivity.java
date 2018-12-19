@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 public class AboutusActivity extends AppCompatActivity {
 
@@ -18,7 +19,8 @@ public class AboutusActivity extends AppCompatActivity {
 
     ListView listViewobj;
 
-    Button facebook,instagram,policy;
+    RelativeLayout facebook,instagram;
+    //Button policy;
 
     String[] title = {"MILAN MIYANI", "AKASH GOLAKIYA", "RAJNISH GUJARATI", "PARAM MORADIYA", "JAIMIK NAVADIYA" };
 
@@ -37,9 +39,9 @@ public class AboutusActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("About");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        facebook = (Button)findViewById(R.id.facebook);
-        instagram = (Button)findViewById(R.id.instagram);
-        policy = (Button)findViewById(R.id.policy);
+        facebook = (RelativeLayout) findViewById(R.id.facebook);
+        instagram = (RelativeLayout) findViewById(R.id.instagram);
+      //  policy = (Button)findViewById(R.id.policy);
 
        /* listViewobj = (ListView) findViewById(R.id.listview);
         AboutusCustomaddapter custobj = new AboutusCustomaddapter(AboutusActivity.this, title, subtitle);
@@ -71,12 +73,12 @@ public class AboutusActivity extends AppCompatActivity {
             }
         });
 
-        policy.setOnClickListener(new View.OnClickListener() {
+        /*policy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
             }
-        });
+        });*/
     }
     public static Intent openFacebook(Context context)
     {
@@ -84,7 +86,7 @@ public class AboutusActivity extends AppCompatActivity {
             context.getPackageManager().getPackageInfo("com.facebook.katana", 0);
             return new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/100007949177744"));
         } catch (Exception e) {
-            return new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/moradiya.param"));
+            return new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/akash.golakiya.7"));
         }
     }
 }
