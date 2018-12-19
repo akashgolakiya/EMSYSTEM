@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- <item
+         android:id="@+id/Account_setting"
+         android:title="Account setting"/>-->
+
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/Information"
+            android:icon="@drawable/infoicon"
+            android:title="Information" />
+
+        <item
+            android:id="@+id/report"
+            android:icon="@drawable/reporticon"
+            android:title="Report" />
+
+        <item
+            android:id="@+id/pastdata"
+            android:icon="@drawable/pastdataicon"
+            android:title="Past data" />
+
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/logouticon"
+            android:title="Log Out" />
+
+        <item
+            android:id="@+id/feedback"
+            android:icon="@drawable/feedbackicon"
+            android:title="Feedback" />
+
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/aboutusicon"
+            android:title="About" />
+    </group>
+</menu>

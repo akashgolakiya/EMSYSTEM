@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EMSYSTEM</string>
+    <string name="google_maps_API_key">AIzaSyCDTrLWCI5vGW-hKGux5U95uMPf7cVOE8w</string>
+    <string name="countdown">main text</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="title_activity_information__maps">Map</string>
+</resources>

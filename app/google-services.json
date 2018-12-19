@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "987605932143",
+    "firebase_url": "https://emsystem-cca03.firebaseio.com",
+    "project_id": "emsystem-cca03",
+    "storage_bucket": "emsystem-cca03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987605932143:android:67b1895b5237346b",
+        "android_client_info": {
+          "package_name": "com.mmproduction.emsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987605932143-s7phflpimtk5j56m46foh6a8k91ncln9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mmproduction.emsystem",
+            "certificate_hash": "742a8bd92a9a7d05cb3ea59487d2207dbe4b3bfb"
+          }
+        },
+        {
+          "client_id": "987605932143-eoekrj3b4en82dln8udkudb83tt3vm86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIG5ymlDwh68wRlo3cgaBH3f2RM7u-PZw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987605932143-eoekrj3b4en82dln8udkudb83tt3vm86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutusActivity"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/Register_toolbar"
+        layout="@layout/app_bar_layout">
+
+    </include>
+
+   <!-- <ListView
+        android:id="@+id/listview"
+        android:layout_below="@id/Register_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ListView>-->
+
+    <ScrollView
+        android:layout_below="@+id/Register_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/logoicon" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="V 0.1.0"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Election Monitoring System"
+                    android:textAlignment="center"
+                    android:textColor="#3498DB"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:drawablePadding="5dp"
+                        android:drawableLeft="@drawable/ic_facebookicon"
+                        android:id="@+id/facebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/facebookbutton"
+                        android:text="like us on facebook" />
+
+
+                    <Button
+                        android:layout_below="@+id/facebook"
+                        android:id="@+id/instagram"
+                        android:drawableLeft="@drawable/ic_instagramicon"
+                        android:layout_width="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:paddingRight="5dp"
+                        android:background="@drawable/facebookbutton"
+                        android:text="follow on instagram" />
+
+                    <Button
+                        android:layout_below="@id/instagram"
+                        android:id="@+id/policy"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/rounde_corner_btn"
+                        android:text="privacy policy" />
+                </RelativeLayout>
+            </ScrollView>
+
+           <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Register_toolbar"></ListView>
+
+            </LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

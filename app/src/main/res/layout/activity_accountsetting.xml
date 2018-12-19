@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountsettingActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/setting_profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+        <!--android:src="@drawable/newuser_outline-->"
+        <!--app:civ_border_color="#000000"
+        app:civ_border_width="2dp"-->
+
+    <TextView
+        android:id="@+id/setting_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="181dp"
+        android:text="your name"
+        android:textColor="#5DADE2"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+   <!-- <Button
+        android:id="@+id/setting_changeimage"
+        android:layout_width="211dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="74dp"
+        android:background="@drawable/rounde_corner_btn"
+        android:padding="15dp"
+        android:text="change image"
+        android:textSize="18sp" />-->
+
+    <TextView
+        android:id="@+id/setting_profile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="223dp"
+        android:text="your email"
+        android:textColor="#5DADE2"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/setting_profile_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="your contact"
+        android:textColor="#5DADE2"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
