@@ -31,29 +31,24 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         change = (EditText) findViewById(R.id.reset_pass);
         reset = (Button) findViewById(R.id.reset_btn);
         firebaseAuth = FirebaseAuth.getInstance();
-
         mtoolbar = (Toolbar) findViewById(R.id.Register_toolbar);
-
         setSupportActionBar(mtoolbar);
         getSupportActionBar().setTitle("ForgotPasswordActivity Password");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         mRegprogress = new ProgressDialog(this);
 
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (CheckNetwork.isInternetAvailable(ForgotPasswordActivity.this)) {
+                    String email = change.getText().toString();
+                    mRegprogress.setMessage("sendind reset link to this E-mail");
+                    mRegprogress.show();
+                    if (email.equals("")) {
+                        mRegprogress.dismiss();
+                        Toast.makeText(ForgotPasswordActivity.this, "Email is required...", Toast.LENGTH_SHORT).show();
+                    } else {
 
-
-                String email = change.getText().toString();
-
-                mRegprogress.setMessage("sendind reset link to this E-mail");
-                mRegprogress.show();
-                if (email.equals("")) {
-                    mRegprogress.dismiss();
-                    Toast.makeText(ForgotPasswordActivity.this, "Email is required...", Toast.LENGTH_SHORT).show();
-                } else {
-                    if (CheckNetwork.isInternetAvailable(ForgotPasswordActivity.this)) {
                         firebaseAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
@@ -68,11 +63,11 @@ public class ForgotPasswordActivity extends AppCompatActivity {
                                 }
                             }
                         });
-                    }else{
-                        mRegprogress.dismiss();
-                        Snackbar snackbar = Snackbar.make(reset, "No Internet Connection", Snackbar.LENGTH_LONG);
-                        snackbar.show();
                     }
+                } else {
+                    mRegprogress.dismiss();
+                    Snackbar snackbar = Snackbar.make(reset, "No Internet Connection", Snackbar.LENGTH_LONG);
+                    snackbar.show();
                 }
             }
         });
