@@ -88,7 +88,7 @@ public class ReportActivity extends AppCompatActivity {
         //to hide keyboard when activity start
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
-
+//report_akash
         //this is report activity
         //mprogressbar = (ProgressBar)findViewById(R.id.report_progress_bar);
         mbtncooseimag = (Button) findViewById(R.id.btnChooseimage);
