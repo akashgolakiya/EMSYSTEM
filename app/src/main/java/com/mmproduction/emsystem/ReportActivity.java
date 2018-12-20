@@ -146,6 +146,9 @@ public class ReportActivity extends AppCompatActivity {
                         mDatabaseref = FirebaseDatabase.getInstance().getReference().child("reportmsg").child(uid);
 
                         uploadImage();
+
+                        mbtncooseimag.setEnabled(false);
+                        mbtnuploadimage.setEnabled(false);
                     }
                     else{
                         Snackbar snackbar = Snackbar.make(mbtnuploadimage, "No Internet Connection", Snackbar.LENGTH_LONG);
