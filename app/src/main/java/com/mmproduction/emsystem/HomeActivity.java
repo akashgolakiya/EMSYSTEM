@@ -287,10 +287,6 @@ public class HomeActivity extends AppCompatActivity {
                         }
                             break;
                     }
-            /*case R.id.Account_setting: {
-                startActivity(new Intent(HomeActivity.this, AccountsettingActivity.class));
-                break;
-            }*/
                 }
                 return true;
             }
