@@ -89,6 +89,7 @@ public class ReportActivity extends AppCompatActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
 
+        //this is report activity
         //mprogressbar = (ProgressBar)findViewById(R.id.report_progress_bar);
         mbtncooseimag = (Button) findViewById(R.id.btnChooseimage);
         mbtnuploadimage = (Button) findViewById(R.id.btnUploagImage);
