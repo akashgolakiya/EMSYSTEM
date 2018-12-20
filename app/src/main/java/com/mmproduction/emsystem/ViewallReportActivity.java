@@ -21,12 +21,12 @@ import java.util.ArrayList;
 public class ViewallReportActivity extends AppCompatActivity {
 
     private Toolbar mtoolbar;
-    private ListView mlistview,mlistview1;
+    private ListView mlistview, mlistview1;
 
-//    FirebaseDatabase mdatabase;
+    //    FirebaseDatabase mdatabase;
 //    FirebaseListAdapter adapter ;
 //    DatabaseReference mdatabasereferense;
-    FirebaseListAdapter adapter,adapter1;
+    FirebaseListAdapter adapter, adapter1;
     // /User is a class which i am going to map my data
     ArrayList<String> mlist;
     ArrayAdapter<String> madapter;
@@ -49,42 +49,36 @@ public class ViewallReportActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Activity Reported by User");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        if(CheckNetwork.isInternetAvailable(ViewallReportActivity.this)) {
-            Query query = FirebaseDatabase.getInstance().getReference().child("reportmsg");
-            FirebaseListOptions<ViewReports> options = new FirebaseListOptions.Builder<ViewReports>().setLayout(R.layout.view_all_report_info_layout).setQuery(query, ViewReports.class).build();
+        Query query = FirebaseDatabase.getInstance().getReference().child("reportmsg");
+        FirebaseListOptions<ViewReports> options = new FirebaseListOptions.Builder<ViewReports>().setLayout(R.layout.view_all_report_info_layout).setQuery(query, ViewReports.class).build();
 
-            adapter = new FirebaseListAdapter(options) {
-                @Override
-                protected void populateView(View v, Object model, int position) {
+        adapter = new FirebaseListAdapter(options) {
+            @Override
+            protected void populateView(View v, Object model, int position) {
 
-                    name = v.findViewById(R.id.idnameinfo);
-                    //TextView contact_no = v.findViewById(R.id.idcontactinfo);
-                    email = v.findViewById(R.id.idemailinfo);
-                    message = v.findViewById(R.id.idtextinfo);
-                    date = v.findViewById(R.id.iddateinfo);
-                    time = v.findViewById(R.id.idtimeinfo);
-                    image = v.findViewById(R.id.idimageinfo);
-                    //ImageView image = v.findViewById(R.id.idimageinfo);
+                name = v.findViewById(R.id.idnameinfo);
+                //TextView contact_no = v.findViewById(R.id.idcontactinfo);
+                email = v.findViewById(R.id.idemailinfo);
+                message = v.findViewById(R.id.idtextinfo);
+                date = v.findViewById(R.id.iddateinfo);
+                time = v.findViewById(R.id.idtimeinfo);
+                image = v.findViewById(R.id.idimageinfo);
+                //ImageView image = v.findViewById(R.id.idimageinfo);
 
-                    ViewReports rep = (ViewReports) model;
+                ViewReports rep = (ViewReports) model;
 
 
-                    date.setText("Date : " + rep.getDate().toString());
-                    time.setText("Time : " + rep.getTime().toString());
-                    name.setText("Name : " + rep.getName().toString());
-                    email.setText("Email : " + rep.getEmail().toString());
-                    message.setText("Message : " + rep.getMessage().toString());
-                    urlImage = rep.getURL();
-                    //Picasso.get().load(rep.getURL()).into(image);
-                    Glide.with(ViewallReportActivity.this).load(urlImage).into(image);
-                }
-            };
-            mlistview.setAdapter(adapter);
-        }
-        else {
-            Snackbar snackbar = Snackbar.make(mlistview, "No Internet Connection", Snackbar.LENGTH_LONG);
-            snackbar.show();
-        }
+                date.setText("Date : " + rep.getDate().toString());
+                time.setText("Time : " + rep.getTime().toString());
+                name.setText("Name : " + rep.getName().toString());
+                email.setText("Email : " + rep.getEmail().toString());
+                message.setText("Message : " + rep.getMessage().toString());
+                urlImage = rep.getURL();
+                //Picasso.get().load(rep.getURL()).into(image);
+                Glide.with(ViewallReportActivity.this).load(urlImage).into(image);
+            }
+        };
+        mlistview.setAdapter(adapter);
     }
 
     @Override
