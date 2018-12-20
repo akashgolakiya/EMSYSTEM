@@ -2,6 +2,7 @@ package com.mmproduction.emsystem;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -276,10 +277,16 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(new Intent(HomeActivity.this, ResultActivity.class));
                         break;
                     }
-                    /*case R.id.feedback: {
+                    case R.id.feedback: {
 
-                        break;
-                    }*/
+                        Intent intent = new Intent(Intent.ACTION_SENDTO);
+                        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+                        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"parammoradiya98@gmail.com","akashgolakiya501@gmail.com","milanmiyani11@gmail.com","rajnigujarati567@gmail.com","Jaimiknavadiya@gmail.com"});
+                        if (intent.resolveActivity(getPackageManager()) != null) {
+                            startActivity(intent);
+                        }
+                            break;
+                    }
             /*case R.id.Account_setting: {
                 startActivity(new Intent(HomeActivity.this, AccountsettingActivity.class));
                 break;
