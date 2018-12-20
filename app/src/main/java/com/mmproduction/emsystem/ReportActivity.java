@@ -58,6 +58,7 @@ public class ReportActivity extends AppCompatActivity {
     private static final String DATE_PATTERN =
             "(0?[1-9]|1[012]) [/.-] (0?[1-9]|[12][0-9]|3[01]) [/.-] ((19|20)\\d\\d)";
 //report
+    //hcbhjbvhjb
     ProgressBar mprogressbar;
     ImageView mImage;
     Button mbtncooseimag, mbtnuploadimage;
@@ -88,7 +89,7 @@ public class ReportActivity extends AppCompatActivity {
         //to hide keyboard when activity start
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
-//report_akash
+        //report_akash
         //this is report activity
         //mprogressbar = (ProgressBar)findViewById(R.id.report_progress_bar);
         mbtncooseimag = (Button) findViewById(R.id.btnChooseimage);
