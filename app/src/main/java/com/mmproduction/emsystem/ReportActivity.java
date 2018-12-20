@@ -146,7 +146,7 @@ public class ReportActivity extends AppCompatActivity {
                         mDatabaseref = FirebaseDatabase.getInstance().getReference().child("reportmsg").child(uid);
 
                         uploadImage();
-
+                        //this is changed
                         mbtncooseimag.setEnabled(false);
                         mbtnuploadimage.setEnabled(false);
                     }
